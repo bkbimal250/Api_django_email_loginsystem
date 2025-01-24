@@ -46,7 +46,7 @@ PostgreSQL or MySQL (as the database backend)
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Api_django_email_loginsystem.git
+git clone https://github.com/bkbimal250/Api_django_email_loginsystem.git
 
 
 
