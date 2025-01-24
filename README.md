@@ -39,23 +39,21 @@ git clone https://github.com/your-username/Api_django_email_loginsystem.git
 
 Create a virtual environment:
 
-
-** Copy **
+bash
+Copy
 python -m venv myenv
 Activate the virtual environment:
 
 Windows:
-bash
 Copy
 myenv\Scripts\activate
 Mac/Linux:
-bash
 Copy
 source myenv/bin/activate
 Install the dependencies:
 
-bash
-**Copy**
+``
+Copy
 pip install -r requirements.txt
 
 
@@ -73,32 +71,34 @@ DATABASES = {
         'PORT': '3306',  # Default MySQL port (use the correct port if it's different)
     }
 }
-'''
+
 Update DATABASES settings in settings.py for your database connection.
 
 Run database migrations:
-
+```
+Copy
+python manage.py makemigrations
+```
 Copy
 python manage.py migrate
 Create a superuser (if using Django Admin):
 
-bash
 Copy
 python manage.py createsuperuser
 
 Run the development server:
 
-bash
-Copy
+
 python manage.py runserver
 You can now access the app at http://127.0.0.1:8000/.
+'''
 
 **Test api by using postman , first create acoount and use it**
-base
-copy
-https://www.postman.com/
+
+go to https://www.postman.com/
 
 **the api url**
+
 [
 http://localhost:8000/api/accounts/register/,
 http://localhost:8000/api/accounts/login/,
