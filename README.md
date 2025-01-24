@@ -44,6 +44,8 @@ PostgreSQL or MySQL (as the database backend)
 ## Installation
 
 ### 1. Clone the repository:
+Copy manually this link, paste to cmd where you want to run your project
+
 
 ```bash
 git clone https://github.com/bkbimal250/Api_django_email_loginsystem.git
