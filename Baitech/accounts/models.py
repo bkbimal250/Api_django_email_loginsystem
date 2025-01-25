@@ -51,7 +51,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 class Client(models.Model):
     client_name = models.CharField(max_length=255)
     client_email = models.EmailField(unique=True)
-    client_phone = models.CharField(max_length=15, blank=True)  # Optional phone number
+    client_phone = models.CharField(max_length=15, blank=False)  # Optional phone number
     address = models.TextField(blank=False)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)  # Optional foreign key to User
     created_at = models.DateTimeField(auto_now_add=True)
