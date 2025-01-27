@@ -7,7 +7,7 @@ Example: This project is a task management system where users can be assigned to
 ## Features
 
 - **User Management**: Users can register, log in, and be assigned to projects.
-- **Client Management**: Clients can create, update, and delete projects. Each client can manage multiple projects.
+- **Client Management**: Users can create, update, and delete clients. Each client can manage multiple projects
 - **Project Assignment**: Projects can be assigned to multiple users.
 - **Project Overview**: Users can view their assigned projects and project details.
 
@@ -21,9 +21,6 @@ Example: This project is a task management system where users can be assigned to
 
 ### 1. User Registration & Authentication:
 Users can register using their email and password. Once registered, users can log in to view or manage the projects they are assigned to.
-
-### 2. Client Creation and Management:
-Clients can create new projects by providing details like project name, description, and client association. Clients can update or delete projects as needed. Each client can have multiple projects, and these projects are linked to them in the database.
 
 ### 3. Project Creation:
 Projects are created under a specific client, and users can be assigned to the project. The project will have a many-to-many relationship with users, meaning multiple users can work on the same project.
@@ -58,7 +55,7 @@ git clone https://github.com/bkbimal250/Api_django_email_loginsystem.git
 python -m venv myenv
 
 
-3. Activate the virtual environment:
+###3. Activate the virtual environment:
 Windows:
 
 ```bash
@@ -73,7 +70,7 @@ source myenv/bin/activate
 ```bash
 pip install -r requirements.txt
 
-5. Set up the database:
+### 5. Set up the database:
 Make sure your database is set up (PostgreSQL/MySQL).
 
 For example, configure the database settings in settings.py:
@@ -83,7 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Use MySQL backend
         'NAME': 'your_database_name',  # The name of your MySQL database
-        'USER': 'your_mysql_username',  # Your MySQL username
+        'USER': 'your_mysql_username',  # Your MySQL username eg. root
         'PASSWORD': 'your_mysql_password',  # Your MySQL password
         'HOST': 'localhost',  # Set to 'localhost' if MySQL is running locally
         'PORT': '3306',  # Default MySQL port (use the correct port if it's different)
