@@ -53,7 +53,7 @@ class Client(models.Model):
     client_email = models.EmailField(unique=True)
     client_phone = models.CharField(max_length=15, blank=False)  # Optional phone number
     address = models.TextField(blank=False)
-    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)  # Optional foreign key to User
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL,blank=False)  # Optional foreign key to User
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -64,10 +64,10 @@ class Client(models.Model):
 class Project(models.Model):
     project_name = models.CharField(max_length=255)
     project_description = models.TextField(blank=False)
-    project_client = models.ForeignKey(Client, related_name='projects', on_delete=models.CASCADE, null=True, blank=True)
+    project_client = models.ForeignKey(Client, related_name='projects', on_delete=models.CASCADE, blank=False)
       # Foreign key to Client
     working_users = models.ManyToManyField(get_user_model(), related_name='projects')  # Many-to-Many relationship with User
-    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)  # Optional foreign key to User
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=False)  # Optional foreign key to User
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
