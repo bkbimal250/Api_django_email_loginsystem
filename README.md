@@ -45,7 +45,7 @@ Copy manually this link, paste to cmd where you want to run your project
 
 
 ```bash
-git clone https://github.com/bkbimal250/Api_django_email_loginsystem.git
+git clone https://github.com/bkbimal250/Api_django_email_loginsystem.git.git
 
 
 
